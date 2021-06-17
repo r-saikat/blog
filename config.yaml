@@ -1,7 +1,7 @@
-baseURL: https://ublogger.netlify.app/
+baseURL: https://rsaikat.com/
 defaultContentLanguage: en
 theme: uBlogger
-title: uBlogger
+title: Saikat
 enableRobotsTXT: yes
 enableGitInfo: yes
 enableEmoji: yes
@@ -54,7 +54,7 @@ languages:
           post: ''
           pre: <i class='fab fa-github fa-fw'></i>
           title: GitHub
-          url: https://github.com/upagge/ublogger
+          url: https://github.com/r-saikat/
           weight: 6
     paginate: 12
     params:
@@ -64,8 +64,8 @@ languages:
         svgFavicon: ''
         themeColor: '#ffffff'
         tileColor: '#da532c'
-        title: uBlogger
-      description: About uBlogger Theme
+        title: Saikat
+      description: Saikat's Blog
       home:
         posts:
           enable: yes
@@ -76,8 +76,8 @@ languages:
           enable: yes
           gravatarEmail: ''
           social: yes
-          subtitle: A Clean, Elegant but Advanced Hugo Theme
-          title: uBlogger | Hugo Theme
+          subtitle: My personal blog
+          title: Saikat Roy
         rss: 10
       keywords:
         - Theme
@@ -104,32 +104,29 @@ languages:
         Codepen: ''
         Deviantart: ''
         Devto: ''
-        Discord: xxxxxxxxx
+        Discord: ''
         DockerHub: ''
         Douban: ''
         Dribbble: ''
-        Email: xxxx@xxxx.com
-        Facebook: xxxx
+        Email: mailsaikatr@gmail.com
+        Facebook: ''
         Fivehundredpx: ''
         Flickr: ''
         Foursquare: ''
         FreeCodeCamp: ''
-        GitHub: xxxx
+        GitHub: r-saikat
         Gitea: ''
         Gitlab: ''
         Goodreads: ''
         Googlescholar: ''
         Hackernews: ''
-        Instagram: xxxx
+        Instagram: ''
         Jsfiddle: ''
         Keybase: ''
         Kickstarter: ''
         Lastfm: ''
         Leanpub: ''
-        Linkedin: ''
-        Mastodon:
-          id: '@xxxx'
-          prefix: https://mastodon.technology/
+        Linkedin: 'rsaikat'
         Matrix: ''
         Medium: ''
         Mix: ''
@@ -138,7 +135,7 @@ languages:
         Paypal: ''
         Pinterest: ''
         Quora: ''
-        RSS: yes
+        RSS: ''
         Reddit: ''
         Researchgate: ''
         Skype: ''
@@ -149,11 +146,11 @@ languages:
         Stackoverflow: ''
         Steam: ''
         Strava: ''
-        Telegram: xxxx
+        Telegram: ''
         Thingiverse: ''
         Tumblr: ''
         Twitch: ''
-        Twitter: xxxx
+        Twitter: ''
         Udemy: ''
         VK: ''
         Vine: ''
@@ -164,12 +161,12 @@ languages:
         Xing: ''
         Youtubechannel: ''
         Youtubecustom: ''
-        Youtubelegacy: xxxx
+        Youtubelegacy: ''
         Zhihu: ''
     weight: 1
 params:
   analytics:
-    enable: yes
+    enable: no
     fathom:
       id: ''
       server: ''
@@ -178,7 +175,7 @@ params:
       gtag: no
       id: ''
     yandex:
-      id: '70532758'
+      id: ''
   cdn:
     data: jsdelivr.yml
   comment:
@@ -201,8 +198,8 @@ params:
       owner: ''
       repo: ''
     remark42:
-      enable: yes
-      host: https://comments.upagge.ru
+      enable: no
+      host: 
       locale: en
       site: documentation
     telegram:
@@ -264,7 +261,7 @@ params:
     mobileMode: auto
     title:
       logo: ''
-      name: uBlogger
+      name: Blog
       post: ''
       pre: <i class='fas fa-pencil-alt fa-fw'></i>
   images: /logo.png
