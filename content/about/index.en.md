@@ -17,10 +17,13 @@ Want to send me a message?
 
 <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
   <p>
-    <label>Email: <input type="text" name="name" /></label>
+    <label>Name: <input type="text" name="name" /></label>
   </p>
   <p>
-    <label>Message: <textarea name="message"></textarea></label>
+    <label>Email: <input type="text" name="email" /></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"  rows="10" cols="100"></textarea></label>
   </p>
   <div data-netlify-recaptcha="true"></div>
   <p>
