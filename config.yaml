@@ -71,7 +71,7 @@ languages:
           enable: yes
           paginate: 6
         profile:
-          avatarURL: /images/avatar.png
+          avatarURL: /images/Avatar-vector.svg
           disclaimer: ''
           enable: yes
           gravatarEmail: ''
@@ -302,7 +302,7 @@ params:
     seo:
       images: []
       publisher:
-        logoUrl: /images/avatar.png
+        logoUrl: /images/Avatar-vector.svg
         name: xxxx
     share:
       Baidu: no
