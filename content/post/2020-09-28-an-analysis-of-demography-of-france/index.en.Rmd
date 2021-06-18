@@ -39,9 +39,9 @@ license: ''
 
 
 
-Last day, my professor asked me to analyse some common demographic parameters of France. France, like most other European first-world nations, and unlike India, is in an advanced phase of demographic transition. The perils of an ageing population is imminent. An old population is pernicious for both its economy and healthcare system. France is not too old, yet, but policymakers must prepare well in advance for both waning fertility rates :baby: and a huge proportion of elderly people :older_woman:. No wonder China is encouraging its citizens to have three babies, marking the failure of the one-child policy.
+Last day, my professor asked me to analyse some common demographic parameters of France. France, like most other European first-world nations, and unlike India, is on the verge of getting into an advanced phase of demographic transition. The perils of an ageing population is imminent. An old population is pernicious for both its economy and healthcare system. France is not too old, yet, but policymakers must prepare well in advance for both waning fertility rates :baby: and a huge proportion of elderly people :older_woman:. No wonder China is encouraging its citizens to have three babies, marking the failure of the one-child policy.
 
-Note that all population counts are given in thousands and have been rounded off to the nearest integer. I'll be depending on the [`pyramid`](https://cran.r-project.org/web/packages/pyramid/index.html) package in R to analyse the demographic parameters.
+Note that all population counts are given in thousands and have been rounded off to the nearest integer. I'll be depending on the [`pyramid`](https://cran.r-project.org/web/packages/pyramid/index.html) package in R to analyse the demographic parameters. Remember, I have used five year old data in my analysis.
 
 ## Age-sex distribution
 
