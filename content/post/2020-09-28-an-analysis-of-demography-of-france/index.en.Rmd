@@ -1,0 +1,143 @@
+---
+title: 'Preparing For An Ageing French Population'
+author: 'Saikat Roy'
+date: '2020-09-28'
+slug: []
+categories: 
+  - "Demography"
+tags:
+  - Demography
+  - History
+  - France
+  - population pyramid
+  - age-sex distribution
+subtitle: ''
+lastmod: '2021-06-18T21:44:03+05:30'
+description: ''
+page:
+  theme: wide
+upd: ''
+authorComment: ''
+hiddenFromHomePage: no
+hiddenFromSearch: no
+resources:
+  name: featured-image
+  src: featured-image.jpg
+  #name: featured-image-preview
+  #src: featured-image-preview.jpg
+featuredImage: ''
+featuredImagePreview: ''
+images:
+  - ''
+toc:
+  enable: yes
+math:
+  enable: yes
+license: ''
+---
+
+
+
+
+Last day, my professor asked me to analyse some common demographic parameters of France. France, like most other European first-world nations, and unlike India, is in an advanced phase of demographic transition. The perils of an ageing population is imminent. An old population is pernicious for both its economy and healthcare system. France is not too old, yet, but policymakers must prepare well in advance for both waning fertility rates :baby: and a huge proportion of elderly people :older_woman:. No wonder China is encouraging its citizens to have three babies, marking the failure of the one-child policy.
+
+Note that all population counts are given in thousands and have been rounded off to the nearest integer. I'll be depending on the [`pyramid`](https://cran.r-project.org/web/packages/pyramid/index.html) package in R to analyse the demographic parameters.
+
+## Age-sex distribution
+
+```{r, echo=FALSE, comment=NA}
+dat1985 <- read.csv("1985.csv")
+dat2015 <- read.csv("2015.csv")
+colnames(dat1985)<-c("Age_groups", "Males(1985)","Females(1985)")
+colnames(dat2015)<-c("Males(2015)","Females(2015)","Age_groups")
+final <- merge(dat1985,dat2015, by = "Age_groups", sort = FALSE)
+x <- colnames(final)
+x[1] <- "Age groups"
+colnames(final) <- x
+knitr::kable(final)
+```
+
+
+
+## Median Age
+
+Year| Median Age (in years)
+---|---
+1985|33.6
+2015|41.2
+
+Thus, 50% of the French population in 1985 were below the age of 33.6 and the rest were of ages more than 33.6, whereas in 2015, 50% of the population were below the age of 41.2 and the others were of age more than 41.2. Thus, the median age of the French population has increased.
+
+## Dependency Ratio
+
+Total dependency ratio is the ratio of population aged 0-14 and 65+ per 100 population of the age group 15-64.
+
+$$
+\text{Total Dependency Ratio} =~ \dfrac{\text{Population in the age-group 0-14 and 65+}}{\text{Population in the age-group 15-64}} \times 100
+$$
+
+
+Year| Dependency ratio
+---|---
+1985|51.8
+2015|59.3
+
+Thus, the total dependency ratio has increased in France in 2015 as compared to 1985.
+
+## Index of aging
+
+The ratio of the number of elderly persons of an age when they are generally economically inactive (aged 65 and over) to the number of young persons (from 0 to 14) is known as the index of aging. A multiplier of 100 is often used for representing the data.
+
+$$
+\text{Index of aging} = \dfrac{\text{Population of age 65+}}{\text{Population in the age group 0-14}} \times 100
+$$
+
+Year| Index of Aging
+---|---
+1985|60.97
+2015|102.90
+
+Thus, the proportion of economically inactive persons to number of young persons under the age of 14, i.e., the index of aging has increased hugely in France from 1985 to 2015.
+
+## Potential support ratio
+
+The potential support ratio (PSR) is the number of people aged 15–64 per one older person aged 65 or older. This ratio describes the burden placed on the working population (unemployment and children are not considered in this measure) by the non-working elderly population.
+
+$$
+\text{Potential Support Ratio} = \dfrac{\text{Number of people aged 15-64}}{\text{Number of people aged 65+}}
+$$
+
+Year| Potential support ratio
+---|---
+1985|5.1
+2015|3.3
+
+Thus, the proportion of people aged 15-64 per one person of age 64 or higher has decreased in 2015 as compared to 1985.
+
+## Age-sex Pyramid
+
+A population pyramid, also called an "age-gender pyramid" or "age-sex pyramid", is a graphical illustration that shows the distribution of various age groups in a population (typically that of a country or region of the world), which forms the shape of a pyramid when the population is growing. The age-sex pyramids of France in 1985 (left) and 2015 (right) are given below.
+
+```{r, echo=TRUE,fig.width = 10,fig.height=10, fig.asp = .8,fig.cap="Age-sex Pyramid",fig.show='hold',fig.align='center'}
+
+library(pyramid)
+par(mfrow=c(1,2))
+#analysis of 1985 (France)
+dat1985 <- read.csv("1985.csv")
+#class(dat1985)
+colnames(dat1985)<-c("Age_groups", "Males","Females")
+#attach(dat1985)
+m <- dat1985$Males/(sum(dat1985$Males)+sum(dat1985$Females)) * 100
+f <- dat1985$Females/(sum(dat1985$Females)+sum(dat1985$Females)) *100
+z <- data.frame(m,f,dat1985$Age_groups)
+figure_85 <- pyramid(z,Llab="Males in %", Rlab="Females in %", Clab="Age groups",main = 1985)
+#analysis of 2015 (France)
+dat2015 <- read.csv("2015.csv")
+attach(dat2015)
+m1 <- dat2015$Male/(sum(dat2015$Male)+sum(dat2015$Female)) * 100
+f1 <- dat2015$Female/(sum(dat2015$Female)+sum(dat2015$Female)) * 100
+z1 <- data.frame(m1,f1,Age_groups)
+figure_15 <- pyramid(z1,Llab="Males in %", Rlab="Females in %", Clab="Age groups",main = "2015")
+#knitr::include_graphics(c("figure_85","figure_15"))
+```
+Observe that there has been a change in the demography France. Proportion of middle-aged persons in the population has increased in 2015 as compared to 1985.

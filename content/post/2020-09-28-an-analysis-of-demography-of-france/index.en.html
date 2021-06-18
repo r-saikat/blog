@@ -1,0 +1,339 @@
+---
+title: 'Preparing For An Ageing French Population'
+author: 'Saikat Roy'
+date: '2020-09-28'
+slug: []
+categories: 
+  - "Demography"
+tags:
+  - Demography
+  - History
+  - France
+  - population pyramid
+  - age-sex distribution
+subtitle: ''
+lastmod: '2021-06-18T21:44:03+05:30'
+description: ''
+page:
+  theme: wide
+upd: ''
+authorComment: ''
+hiddenFromHomePage: no
+hiddenFromSearch: no
+resources:
+  name: featured-image
+  src: featured-image.jpg
+  #name: featured-image-preview
+  #src: featured-image-preview.jpg
+featuredImage: ''
+featuredImagePreview: ''
+images:
+  - ''
+toc:
+  enable: yes
+math:
+  enable: yes
+license: ''
+---
+
+<script src="{{< blogdown/postref >}}index.en_files/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>Last day, my professor asked me to analyse some common demographic parameters of France. France, like most other European first-world nations, and unlike India, is in an advanced phase of demographic transition. The perils of an ageing population is imminent. An old population is pernicious for both its economy and healthcare system. France is not too old, yet, but policymakers must prepare well in advance for both waning fertility rates :baby: and a huge proportion of elderly people :older_woman:. No wonder China is encouraging its citizens to have three babies, marking the failure of the one-child policy.</p>
+<p>Note that all population counts are given in thousands and have been rounded off to the nearest integer. I’ll be depending on the <a href="https://cran.r-project.org/web/packages/pyramid/index.html"><code>pyramid</code></a> package in R to analyse the demographic parameters.</p>
+<div id="age-sex-distribution" class="section level2">
+<h2>Age-sex distribution</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Age groups</th>
+<th align="right">Males(1985)</th>
+<th align="right">Females(1985)</th>
+<th align="right">Males(2015)</th>
+<th align="right">Females(2015)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0-4</td>
+<td align="right">1961</td>
+<td align="right">1870</td>
+<td align="right">1991</td>
+<td align="right">1902</td>
+</tr>
+<tr class="even">
+<td align="left">5-9</td>
+<td align="right">1885</td>
+<td align="right">1796</td>
+<td align="right">2033</td>
+<td align="right">1942</td>
+</tr>
+<tr class="odd">
+<td align="left">10-14</td>
+<td align="right">2155</td>
+<td align="right">2052</td>
+<td align="right">2027</td>
+<td align="right">1934</td>
+</tr>
+<tr class="even">
+<td align="left">15-19</td>
+<td align="right">2196</td>
+<td align="right">2117</td>
+<td align="right">1956</td>
+<td align="right">1871</td>
+</tr>
+<tr class="odd">
+<td align="left">20-24</td>
+<td align="right">2190</td>
+<td align="right">2155</td>
+<td align="right">1876</td>
+<td align="right">1843</td>
+</tr>
+<tr class="even">
+<td align="left">25-29</td>
+<td align="right">2109</td>
+<td align="right">2096</td>
+<td align="right">1923</td>
+<td align="right">1953</td>
+</tr>
+<tr class="odd">
+<td align="left">30-34</td>
+<td align="right">2148</td>
+<td align="right">2113</td>
+<td align="right">1968</td>
+<td align="right">2025</td>
+</tr>
+<tr class="even">
+<td align="left">35-39</td>
+<td align="right">2164</td>
+<td align="right">2102</td>
+<td align="right">1925</td>
+<td align="right">1971</td>
+</tr>
+<tr class="odd">
+<td align="left">40-44</td>
+<td align="right">1511</td>
+<td align="right">1454</td>
+<td align="right">2166</td>
+<td align="right">2193</td>
+</tr>
+<tr class="even">
+<td align="left">45-49</td>
+<td align="right">1486</td>
+<td align="right">1477</td>
+<td align="right">2171</td>
+<td align="right">2218</td>
+</tr>
+<tr class="odd">
+<td align="left">50-54</td>
+<td align="right">1548</td>
+<td align="right">1581</td>
+<td align="right">2137</td>
+<td align="right">2217</td>
+</tr>
+<tr class="even">
+<td align="left">55-59</td>
+<td align="right">1474</td>
+<td align="right">1574</td>
+<td align="right">1984</td>
+<td align="right">2106</td>
+</tr>
+<tr class="odd">
+<td align="left">60-64</td>
+<td align="right">1348</td>
+<td align="right">1549</td>
+<td align="right">1895</td>
+<td align="right">2056</td>
+</tr>
+<tr class="even">
+<td align="left">65-69</td>
+<td align="right">726</td>
+<td align="right">903</td>
+<td align="right">1773</td>
+<td align="right">1972</td>
+</tr>
+<tr class="odd">
+<td align="left">70-74</td>
+<td align="right">844</td>
+<td align="right">1179</td>
+<td align="right">1125</td>
+<td align="right">1310</td>
+</tr>
+<tr class="even">
+<td align="left">75-79</td>
+<td align="right">638</td>
+<td align="right">1045</td>
+<td align="right">937</td>
+<td align="right">1226</td>
+</tr>
+<tr class="odd">
+<td align="left">80-84</td>
+<td align="right">367</td>
+<td align="right">740</td>
+<td align="right">731</td>
+<td align="right">1127</td>
+</tr>
+<tr class="even">
+<td align="left">85-89</td>
+<td align="right">137</td>
+<td align="right">378</td>
+<td align="right">423</td>
+<td align="right">821</td>
+</tr>
+<tr class="odd">
+<td align="left">90-94</td>
+<td align="right">32</td>
+<td align="right">125</td>
+<td align="right">165</td>
+<td align="right">435</td>
+</tr>
+<tr class="even">
+<td align="left">95-99</td>
+<td align="right">5</td>
+<td align="right">24</td>
+<td align="right">22</td>
+<td align="right">84</td>
+</tr>
+<tr class="odd">
+<td align="left">100+</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">18</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="median-age" class="section level2">
+<h2>Median Age</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Median Age (in years)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1985</td>
+<td>33.6</td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td>41.2</td>
+</tr>
+</tbody>
+</table>
+<p>Thus, 50% of the French population in 1985 were below the age of 33.6 and the rest were of ages more than 33.6, whereas in 2015, 50% of the population were below the age of 41.2 and the others were of age more than 41.2. Thus, the median age of the French population has increased.</p>
+</div>
+<div id="dependency-ratio" class="section level2">
+<h2>Dependency Ratio</h2>
+<p>Total dependency ratio is the ratio of population aged 0-14 and 65+ per 100 population of the age group 15-64.</p>
+<p><span class="math display">\[
+\text{Total Dependency Ratio} =~ \dfrac{\text{Population in the age-group 0-14 and 65+}}{\text{Population in the age-group 15-64}} \times 100
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Dependency ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1985</td>
+<td>51.8</td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td>59.3</td>
+</tr>
+</tbody>
+</table>
+<p>Thus, the total dependency ratio has increased in France in 2015 as compared to 1985.</p>
+</div>
+<div id="index-of-aging" class="section level2">
+<h2>Index of aging</h2>
+<p>The ratio of the number of elderly persons of an age when they are generally economically inactive (aged 65 and over) to the number of young persons (from 0 to 14) is known as the index of aging. A multiplier of 100 is often used for representing the data.</p>
+<p><span class="math display">\[
+\text{Index of aging} = \dfrac{\text{Population of age 65+}}{\text{Population in the age group 0-14}} \times 100
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Index of Aging</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1985</td>
+<td>60.97</td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td>102.90</td>
+</tr>
+</tbody>
+</table>
+<p>Thus, the proportion of economically inactive persons to number of young persons under the age of 14, i.e., the index of aging has increased hugely in France from 1985 to 2015.</p>
+</div>
+<div id="potential-support-ratio" class="section level2">
+<h2>Potential support ratio</h2>
+<p>The potential support ratio (PSR) is the number of people aged 15–64 per one older person aged 65 or older. This ratio describes the burden placed on the working population (unemployment and children are not considered in this measure) by the non-working elderly population.</p>
+<p><span class="math display">\[
+\text{Potential Support Ratio} = \dfrac{\text{Number of people aged 15-64}}{\text{Number of people aged 65+}}
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Potential support ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1985</td>
+<td>5.1</td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td>3.3</td>
+</tr>
+</tbody>
+</table>
+<p>Thus, the proportion of people aged 15-64 per one person of age 64 or higher has decreased in 2015 as compared to 1985.</p>
+</div>
+<div id="age-sex-pyramid" class="section level2">
+<h2>Age-sex Pyramid</h2>
+<p>A population pyramid, also called an “age-gender pyramid” or “age-sex pyramid”, is a graphical illustration that shows the distribution of various age groups in a population (typically that of a country or region of the world), which forms the shape of a pyramid when the population is growing. The age-sex pyramids of France in 1985 (left) and 2015 (right) are given below.</p>
+<pre class="r"><code>library(pyramid)
+par(mfrow=c(1,2))
+#analysis of 1985 (France)
+dat1985 &lt;- read.csv(&quot;1985.csv&quot;)
+#class(dat1985)
+colnames(dat1985)&lt;-c(&quot;Age_groups&quot;, &quot;Males&quot;,&quot;Females&quot;)
+#attach(dat1985)
+m &lt;- dat1985$Males/(sum(dat1985$Males)+sum(dat1985$Females)) * 100
+f &lt;- dat1985$Females/(sum(dat1985$Females)+sum(dat1985$Females)) *100
+z &lt;- data.frame(m,f,dat1985$Age_groups)
+figure_85 &lt;- pyramid(z,Llab=&quot;Males in %&quot;, Rlab=&quot;Females in %&quot;, Clab=&quot;Age groups&quot;,main = 1985)
+#analysis of 2015 (France)
+dat2015 &lt;- read.csv(&quot;2015.csv&quot;)
+attach(dat2015)
+m1 &lt;- dat2015$Male/(sum(dat2015$Male)+sum(dat2015$Female)) * 100
+f1 &lt;- dat2015$Female/(sum(dat2015$Female)+sum(dat2015$Female)) * 100
+z1 &lt;- data.frame(m1,f1,Age_groups)
+figure_15 &lt;- pyramid(z1,Llab=&quot;Males in %&quot;, Rlab=&quot;Females in %&quot;, Clab=&quot;Age groups&quot;,main = &quot;2015&quot;)
+#knitr::include_graphics(c(&quot;figure_85&quot;,&quot;figure_15&quot;))</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-2-1.png" alt="Age-sex Pyramid" width="960" />
+<p class="caption">
+Figure 1: Age-sex Pyramid
+</p>
+</div>
+<p>Observe that there has been a change in the demography France. Proportion of middle-aged persons in the population has increased in 2015 as compared to 1985.</p>
+</div>
