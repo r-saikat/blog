@@ -19,7 +19,7 @@ languages:
           post: ''
           pre: ''
           title: ''
-          url: /posts/
+          url: /post/
           weight: 1
         - identifier: tags
           name: Tags
