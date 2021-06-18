@@ -108,7 +108,7 @@ languages:
         DockerHub: ''
         Douban: ''
         Dribbble: ''
-        Email: mailsaikatr@gmail.com
+        Email: hi@rsaikat.com
         Facebook: ''
         Fivehundredpx: ''
         Flickr: ''
@@ -374,7 +374,7 @@ markup:
     endLevel: 6
     startLevel: 2
 author:
-  name: upagge.en
+  name: saikat.en
 sitemap:
   changefreq: weekly
   filename: sitemap.xml
