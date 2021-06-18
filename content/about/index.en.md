@@ -13,6 +13,21 @@ I shall use this blog as my personal space to share what I have on my mind. Thou
 
 Feel free to have a look at the [GitHub repo](https://github.com/r-saikat/blog) used to maintain his blog and submit PRs.
 
+Want to send me a message?
+
+<form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+  <p>
+    <label>Email: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <div data-netlify-recaptcha="true"></div>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+
 
 
 
