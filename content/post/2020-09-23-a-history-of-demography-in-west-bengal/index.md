@@ -83,8 +83,8 @@ Sex-ratio | 865 |	878	| 891 |	911 |	917 |	934 |	950
 The sex-ratio of West Bengal, i.e., number of female per 1000 males has been rising steadily over the years.
 
 
+![Demographic parameters of West Bengal over time - 1](images/Rplot1.png)
 
-![](2015-07-23-r-rmarkdown_files/figure-html/Rplot1.png)
 
 
 
@@ -138,8 +138,8 @@ Birth rate (per thousand)|17.5| 17.2| 16.8| 16.3| 16.1| 16.0| 15.6| 15.5| 15.4
 
 The birth rate (per thousand) in West Bengal is decreasing on an average.
 
+![Demographic parameters of West Bengal over time - 2](images/Rplot2.png)
 
-![](2015-07-23-r-rmarkdown_files/figure-html/Rplot2.png)
 
 
 ### Table 9: Death Rate in West Bengal
@@ -159,7 +159,7 @@ Death rate (per thousand)|6.2| 6.2| 6.0| 6.2| 6.3| 6.4 |6.1| 5.9| 5.8
 
 The death rate is decreasing gradually.
 
+![Death Rate of West Bengal](images/Rplot3.png)
 
 
-![](2015-07-23-r-rmarkdown_files/figure-html/Rplot3.png)
 Source: Handbook of Statistics on Indian States, Reserve Bank of India 2018-19
