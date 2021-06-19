@@ -39,7 +39,9 @@ output:
     code_folding: show
 ---
 
-
+```{r echo = FALSE}
+knitr::opts_chunk$set(fig.retina = 2)
+```
 
 
 Last day, my professor asked me to analyse some common demographic parameters of France. France, like most other European first-world nations, and unlike India, is on the verge of getting into an advanced phase of demographic transition. The perils of an ageing population is imminent. An old population is pernicious for both its economy and healthcare system. France is not too old, yet, but policymakers must prepare well in advance for both waning fertility rates :baby: and a huge proportion of elderly people :older_woman:. No wonder China is encouraging its citizens to have three babies, marking the failure of the one-child policy.
