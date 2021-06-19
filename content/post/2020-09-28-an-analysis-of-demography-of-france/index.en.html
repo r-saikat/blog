@@ -25,8 +25,8 @@ resources:
   src: featured-image.jpg
   #name: featured-image-preview
   #src: featured-image-preview.jpg
-featuredImage: ''
-featuredImagePreview: ''
+featuredImage: '/post/2020-09-28-an-analysis-of-demography-of-france/index.en_files/figure-html/unnamed-chunk-2-1.png'
+featuredImagePreview: '/post/2020-09-28-an-analysis-of-demography-of-france/index.en_files/figure-html/unnamed-chunk-2-1.png'
 images:
   - ''
 toc:
@@ -34,6 +34,9 @@ toc:
 math:
   enable: yes
 license: ''
+output:
+  html_document:
+    code_folding: show
 ---
 
 <script src="{{< blogdown/postref >}}index.en_files/header-attrs/header-attrs.js"></script>
@@ -310,7 +313,8 @@ license: ''
 <div id="age-sex-pyramid" class="section level2">
 <h2>Age-sex Pyramid</h2>
 <p>A population pyramid, also called an “age-gender pyramid” or “age-sex pyramid”, is a graphical illustration that shows the distribution of various age groups in a population (typically that of a country or region of the world), which forms the shape of a pyramid when the population is growing. The age-sex pyramids of France in 1985 (left) and 2015 (right) are given below.</p>
-<pre class="r"><code>library(pyramid)
+<pre class="r"><code>
+library(pyramid)
 par(mfrow=c(1,2))
 #analysis of 1985 (France)
 dat1985 &lt;- read.csv(&quot;1985.csv&quot;)

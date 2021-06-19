@@ -19,8 +19,8 @@ resources:
   src: featured-image.jpg
   name: featured-image-preview
   src: featured-image-preview.jpg
-featuredImage: ''
-featuredImagePreview: ''
+featuredImage: '/post/2020-09-23-a-history-of-demography-in-west-bengal/images/west bengal-400862562.jpg'
+featuredImagePreview: '/post/2020-09-23-a-history-of-demography-in-west-bengal/images/west bengal-400862562.jpg'
 images:
   - ''
 toc:
