@@ -121,6 +121,7 @@ Thus, the proportion of people aged 15-64 per one person of age 64 or higher has
 
 A population pyramid, also called an "age-gender pyramid" or "age-sex pyramid", is a graphical illustration that shows the distribution of various age groups in a population (typically that of a country or region of the world), which forms the shape of a pyramid when the population is growing. The age-sex pyramids of France in 1985 (left) and 2015 (right) are given below.
 
+
 ```{r, echo=TRUE,fig.width = 10,fig.height=10, fig.asp = .8,fig.cap="Age-sex Pyramid",fig.show='hold',fig.align='center', collapse=TRUE}
 
 library(pyramid)
@@ -143,4 +144,7 @@ z1 <- data.frame(m1,f1,Age_groups)
 figure_15 <- pyramid(z1,Llab="Males in %", Rlab="Females in %", Clab="Age groups",main = "2015")
 #knitr::include_graphics(c("figure_85","figure_15"))
 ```
+
+
+
 Observe that there has been a change in the demography France. Proportion of middle-aged persons in the population has increased in 2015 as compared to 1985.
