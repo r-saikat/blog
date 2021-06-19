@@ -84,17 +84,17 @@ languages:
         - Hugo
       search:
         absoluteURL: no
-        algolia:
-          appID: PASDMWALPK
-          index: index.en
-          searchKey: b42948e51daaa93df92381c8e2ac0f93
+        #algolia:
+          #appID: PASDMWALPK
+          #index: index.en
+          #searchKey: b42948e51daaa93df92381c8e2ac0f93
         contentLength: 4000
         enable: yes
         highlightTag: em
         maxResultLength: 10
         placeholder: ''
         snippetLength: 30
-        type: algolia
+        type: lunr
       social:
         Angellist: ''
         Bandcamp: ''
