@@ -34,7 +34,7 @@ toc:
 math:
   enable: no
 license: ''
-draft: false
+draft: true
 ---
 
 RStudio is an Integrated Development Environment for R. It has made life easier for thousands of R programmers. In this era of IoT and low power computing, [ARM](https://www.arm.com/) chips are becoming increasingly popular, not only in mobile devices but also in high-end laptops. The [Raspberry Pi project](https://www.raspberrypi.org/) has popularised always-on, low-power computing. Many cloud providers, like [AWS](https://aws.amazon.com/), [Oracle cloud](https://www.oracle.com/in/cloud/), have recognised the tremendous possibilities with ARM chips and offer powerful ARM-based machines.
