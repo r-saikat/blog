@@ -125,7 +125,7 @@ server {
 }
 ```
 
-Remember to replace `example.com` with your domain or a subdomain. It's fairly cheap to buy domains, if you already don't have one. You may use namecheap to buy domains, or [freenom](https://www.freenom.com/en/index.html?lang=en) for a free domain. Point the domain to the IP of the VM from the domain registrar page. Alternatily, you may use the public IP of the VM to access instead of a domain name. This is strongly discouraged as it may leave the connection between the server and your browser insecure. If the server is on a local network, such as your home, you may use it with the IP. Execute `sudo nginx -t` to verify the configuration details.  The output should be similar to:
+Remember to replace `example.com` with your domain or a subdomain. It's fairly cheap to buy domains, if you already don't have one. You may use namecheap to buy domains, or [freenom](https://www.freenom.com/en/index.html?lang=en) for a free domain. Point the domain to the IP of the VM on the domain registrar/ nameserver page. Alternatively, you may use the public IP of the VM to access instead of a domain name. This is strongly discouraged as it may leave the connection between the server and your browser insecure. If the server is on a local network, such as your home, you may use it with the IP. Execute `sudo nginx -t` to verify the configuration details.  The output should be similar to:
 
 ```
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
