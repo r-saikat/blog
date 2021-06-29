@@ -76,7 +76,7 @@ languages:
           enable: yes
           gravatarEmail: ''
           social: yes
-          subtitle: My personal blog. UNDER CONSTRUCTION.
+          subtitle: My personal blog.
           title: Saikat Roy
         rss: 10
       keywords:
