@@ -35,3 +35,7 @@ You may want to test the rendered website on a phone without pushing the site to
 ### High quality images
 
 Add `knitr::opts_chunk$set(fig.retina = 2)` in an R code chunk (obviously with `echo=FALSE`) to globally enable rendering high quality images in the post.
+
+#Deployed with Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/91fd5144-a81a-4cb8-8ba6-965b2ffffabb/deploy-status)](https://app.netlify.com/sites/heuristic-stonebraker-a9704e/deploys)
