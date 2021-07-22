@@ -1,5 +1,5 @@
 # blog
- This is my blog with uBlogger Hugo theme.
+ This repo serves my blog, [rsaikat.com](https://www.rsaikat.com) with uBlogger Hugo theme.
 
 ### Add authors
 data/authors/
@@ -39,3 +39,6 @@ Add `knitr::opts_chunk$set(fig.retina = 2)` in an R code chunk (obviously with `
 # Deployed with Netlify
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/91fd5144-a81a-4cb8-8ba6-965b2ffffabb/deploy-status)](https://app.netlify.com/sites/heuristic-stonebraker-a9704e/deploys)
+
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=r-saikat.blog)
