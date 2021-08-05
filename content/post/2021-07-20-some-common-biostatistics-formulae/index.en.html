@@ -1,0 +1,70 @@
+---
+title: Some Common Biostatistics Formulae
+author: 'Saikat Roy'
+date: '2021-07-20'
+slug: []
+categories:
+  - "Biostatistics"
+tags:
+  - Odds ratio
+  - Relative Risk
+subtitle: ''
+lastmod: '2021-07-20T09:19:40Z'
+description: "I have explained some of the commonly used formulae in Biostatistics."
+page:
+  theme: wide
+upd: ''
+authorComment: ''
+hiddenFromHomePage: no
+hiddenFromSearch: no
+resources:
+  name: featured-image
+  src: featured-image.jpg
+featuredImage: ''
+featuredImagePreview: ''
+images:
+  - ''
+toc:
+  enable: yes
+math:
+  enable: yes
+license: ''
+draft: true
+---
+
+<script src="{{< blogdown/postref >}}index.en_files/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<p>I have explained some of the commonly used categorical data analysis formulae and concepts behind these formulae in Biostatistics in this post.
+<!--more--></p>
+<p>This post contains some commonly used formulae in categorical data analysis. These concepts are often used in contexts other than Biostatistics. So it’ll not be correct to specifically say that these are Biostatistics fomulae. However, all the examples I have used here may be attributed to Biostatistics.</p>
+<div id="risk" class="section level3">
+<h3>1. Risk</h3>
+<p>Risk indicates the likelihood of an event occurring. This is similar to the concepts of proportion and probability.</p>
+<p><span class="math display">\[
+\text{Risk of an event } \mathcal{A}= \text{The probability or the likelihood that the event $\mathcal{A}$ will occur } = \frac{\text{number of outcome of event }\mathcal{A}}{\text{total number of outcomes}}
+\]</span></p>
+<p><span class="math display">\[
+\pi = \frac{n(\mathcal{A})}{\mathcal{N}}
+\]</span></p>
+<p>40 out of 1000 children have jaundice.</p>
+<p><span class="math display">\[
+risk ~of~ children~ having~ jaundice= \frac{40}{1000} = 0.04
+\]</span></p>
+<p>This means that 4% of the children suffer from jaundice.</p>
+<p>Observe that the formulae of risk, likelihood and probability are similar.</p>
+</div>
+<div id="relative-risk" class="section level3">
+<h3>2. Relative Risk</h3>
+<p>The relative risk of an event is a comparison of two risks of the event at two different situations of another event. The relative risk, <span class="math inline">\(\rho\)</span> of the success of an event A (1 denotes success) at two levels (1 and 2) of another event B,</p>
+<p><span class="math display">\[
+\rho = \frac{P(A=1|B=1)}{P(A=1|B=2)}
+\]</span></p>
+<p>The denominator of the term above is the <strong>baseline risk</strong>. It is the risk with which the comparison is being made.</p>
+<p><a href="https://online.stat.psu.edu/stat504/lesson/3/3.1/3.1.8" class="uri">https://online.stat.psu.edu/stat504/lesson/3/3.1/3.1.8</a></p>
+<p><a href="https://online.stat.psu.edu/stat200/lesson/2/2.1/2.1.1/2.1.1.1" class="uri">https://online.stat.psu.edu/stat200/lesson/2/2.1/2.1.1/2.1.1.1</a></p>
+<p><a href="https://online.stat.psu.edu/stat800/lesson/6/6.3" class="uri">https://online.stat.psu.edu/stat800/lesson/6/6.3</a></p>
+</div>
